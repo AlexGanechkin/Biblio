@@ -24,8 +24,8 @@ class Book(BaseModel):
     title = models.CharField(verbose_name="Название", max_length=200)
     description = models.CharField(verbose_name="Описание", max_length=1000)
     page_number = models.PositiveSmallIntegerField()
-    author = models.ForeignKey(Author, verbose_name="Пользователь", on_delete=models.CASCADE, null=True)
-    books_number = models.PositiveBigIntegerField()
+    author = models.ForeignKey(Author, verbose_name="Автор", on_delete=models.CASCADE, null=True, related_name='author')
+    books_number = models.PositiveBigIntegerField(verbose_name="Количество книг")
 
     def __str__(self):
         return self.title

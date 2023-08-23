@@ -4,6 +4,12 @@ from rest_framework import serializers
 from books.models import Author, Book
 
 
+class LessZeroValidator:
+    def __call__(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Количество книг не может быть меньше нуля")
+
+
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
@@ -34,14 +40,15 @@ class BookDetailSerializer(serializers.ModelSerializer):
 
 class BookCreateSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)
+    books_number = serializers.IntegerField(validators=[LessZeroValidator()])
 
     class Meta:
         model = Book
         fields = '__all__'
 
-    def validate_author(self, author):
-        if author.id == 2:
-            raise serializers.ValidationError('Нет автора с таким id')
+    # def validate_author(self, author):
+    #     if author.id == 2:
+    #         raise serializers.ValidationError('Нет автора с таким id')
 
 
 class BookUpdateSerializer(serializers.ModelSerializer):
