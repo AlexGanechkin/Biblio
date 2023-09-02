@@ -1,3 +1,4 @@
+from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
 from django.db import models
@@ -6,7 +7,7 @@ from biblio.models import PersonBaseModel
 from books.models import Book
 
 
-class Reader(PersonBaseModel):
+class Reader(AbstractUser, PersonBaseModel):
 
     class Meta:
         verbose_name = "Читатель"
@@ -19,7 +20,7 @@ class Reader(PersonBaseModel):
         )
     ])
     is_active = models.BooleanField(default=True)
-    books = models.ManyToManyField(Book)
+    books = models.ManyToManyField(Book, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

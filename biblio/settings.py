@@ -11,7 +11,6 @@ env.read_env(BASE_DIR.joinpath('.env'))
 
 SECRET_KEY = 'django-insecure--zs1snwutp5_+f7h%_tu1bw8_y70%86@6zxs4w**bs^c%7s!!7'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['*']
@@ -27,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'books',
     'readers',
 ]
@@ -129,3 +129,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}
+
+AUTH_USER_MODEL = 'readers.Reader'

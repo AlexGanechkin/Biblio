@@ -1,63 +1,23 @@
 [
 {
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$600000$LmjKGklNHPiWJJo2oUHJtN$xPP/pW9wblNR9atolao4iS5fFLkX+BmPrIHmy5TDkLE=",
-    "last_login": "2023-08-09T05:08:03.894Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-08-09T05:07:41.175Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
   "model": "books.author",
   "pk": 1,
   "fields": {
-    "created": "2023-08-09T14:42:25.599Z",
-    "updated": "2023-08-09T14:42:25.599Z",
+    "created": "2023-09-02T07:22:21.352Z",
+    "updated": "2023-09-02T07:22:21.352Z",
     "first_name": "Лев",
     "last_name": "Толстой",
-    "photo": "photos/Tolstoy.jpg"
+    "photo": ""
   }
 },
 {
   "model": "books.author",
   "pk": 2,
   "fields": {
-    "created": "2023-08-15T19:05:55.758Z",
-    "updated": "2023-08-15T19:05:55.783Z",
-    "first_name": "Владислав",
-    "last_name": "Акунин",
-    "photo": ""
-  }
-},
-{
-  "model": "books.author",
-  "pk": 3,
-  "fields": {
-    "created": "2023-08-15T19:06:54.501Z",
-    "updated": "2023-08-15T19:06:54.501Z",
-    "first_name": "Махатма",
-    "last_name": "Ганди",
-    "photo": ""
-  }
-},
-{
-  "model": "books.author",
-  "pk": 4,
-  "fields": {
-    "created": "2023-08-15T19:09:13.705Z",
-    "updated": "2023-08-15T19:09:13.705Z",
-    "first_name": "Салтыков",
-    "last_name": "Щедрин",
+    "created": "2023-09-02T07:22:32.345Z",
+    "updated": "2023-09-02T07:22:32.345Z",
+    "first_name": "Федор",
+    "last_name": "Достоевский",
     "photo": ""
   }
 },
@@ -65,122 +25,72 @@
   "model": "books.book",
   "pk": 1,
   "fields": {
-    "created": "2023-08-09T14:43:30.935Z",
-    "updated": "2023-08-17T20:24:11.187Z",
+    "created": "2023-09-02T07:23:32.704Z",
+    "updated": "2023-09-02T07:23:32.704Z",
     "title": "Война и Мир",
-    "description": "Душевные страдания на фоне войны",
-    "page_number": 500,
+    "description": "Как наваляли французам на фоне любовных п...досраданий",
+    "page_number": 1000,
     "author": 1,
-    "books_number": 1
+    "books_number": 5
   }
 },
 {
   "model": "books.book",
   "pk": 2,
   "fields": {
-    "created": "2023-08-12T07:34:50.279Z",
-    "updated": "2023-08-12T07:34:50.279Z",
-    "title": "Питон для идиотов",
-    "description": "Для самых тупеньких",
-    "page_number": 100,
-    "author": 1,
-    "books_number": 0
-  }
-},
-{
-  "model": "books.book",
-  "pk": 3,
-  "fields": {
-    "created": "2023-08-16T05:13:04.553Z",
-    "updated": "2023-08-16T05:13:04.553Z",
-    "title": "Мертвые души",
-    "description": "Книга про зомби",
-    "page_number": 100,
-    "author": 1,
-    "books_number": 2
-  }
-},
-{
-  "model": "books.book",
-  "pk": 4,
-  "fields": {
-    "created": "2023-08-16T18:26:11.558Z",
-    "updated": "2023-08-16T18:26:11.716Z",
-    "title": "Белый Бим Черное ухо",
-    "description": "Книга про дружбу негра и англичанина",
-    "page_number": 200,
-    "author": 1,
-    "books_number": 10
-  }
-},
-{
-  "model": "books.book",
-  "pk": 5,
-  "fields": {
-    "created": "2023-08-16T19:16:54.590Z",
-    "updated": "2023-08-17T04:07:04.546Z",
-    "title": "Джанго",
-    "description": "Книга про месть негра белым",
-    "page_number": 200,
+    "created": "2023-09-02T07:24:09.733Z",
+    "updated": "2023-09-02T07:24:09.733Z",
+    "title": "Преступление и Наказание",
+    "description": "Пособие по убийству бабушек",
+    "page_number": 500,
     "author": 2,
     "books_number": 4
   }
 },
 {
-  "model": "books.book",
-  "pk": 7,
-  "fields": {
-    "created": "2023-08-17T05:09:44.502Z",
-    "updated": "2023-08-17T05:09:44.502Z",
-    "title": "Джанго особожденный",
-    "description": "Книга про месть негра белым",
-    "page_number": 200,
-    "author": 1,
-    "books_number": 4
-  }
-},
-{
   "model": "readers.reader",
   "pk": 1,
   "fields": {
-    "created": "2023-08-09T14:44:09.089Z",
-    "updated": "2023-08-12T07:35:17.479Z",
-    "first_name": "Алексей",
-    "last_name": "Джонсон",
-    "phone_number": "92711111111",
+    "password": "pbkdf2_sha256$600000$gyqK7mGffYSCyW5OQAz1Yj$xAm+RUEs1aJtGaHCcdJeRfzMkamIUoNeCtp1/mumoDg=",
+    "last_login": "2023-09-02T07:21:09.421Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Иван",
+    "last_name": "Читающий",
+    "email": "",
+    "is_staff": true,
+    "date_joined": "2023-09-02T07:20:47.212Z",
+    "created": "2023-09-02T07:20:48.146Z",
+    "updated": "2023-09-02T07:25:53.104Z",
+    "phone_number": "",
     "is_active": true,
-    "books": [
-      1,
-      2
-    ]
+    "groups": [],
+    "user_permissions": [],
+    "books": []
   }
 },
 {
   "model": "readers.reader",
   "pk": 2,
   "fields": {
-    "created": "2023-08-18T04:43:17.274Z",
-    "updated": "2023-08-18T20:06:21.027Z",
-    "first_name": "Лена",
-    "last_name": "Тихонова",
-    "phone_number": "11233",
+    "password": "alex",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alex",
+    "first_name": "Алексей",
+    "last_name": "Начитанный",
+    "email": "noaddress@ya.ru",
+    "is_staff": false,
+    "date_joined": "2023-09-02T07:25:59Z",
+    "created": "2023-09-02T07:27:27.374Z",
+    "updated": "2023-09-02T07:27:27.374Z",
+    "phone_number": "79271111111",
     "is_active": true,
+    "groups": [],
+    "user_permissions": [],
     "books": [
       1
     ]
-  }
-},
-{
-  "model": "readers.reader",
-  "pk": 3,
-  "fields": {
-    "created": "2023-08-18T19:26:57.817Z",
-    "updated": "2023-08-18T19:26:57.817Z",
-    "first_name": "Клим",
-    "last_name": "Чугунов",
-    "phone_number": "92712345678",
-    "is_active": true,
-    "books": []
   }
 }
 ]

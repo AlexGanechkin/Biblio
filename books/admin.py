@@ -21,7 +21,9 @@ class BookAdmin(admin.ModelAdmin):
 
     @admin.action(description='Помножить на ноль')
     def drop_to_zero(self, request, books: QuerySet):
-        books.update(books_number=0)
+        for book in books:
+            book.clear()
+            book.save()
 
     def author_link(self, obj) -> str:
         return format_html(

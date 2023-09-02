@@ -24,7 +24,14 @@ class ReaderCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Reader
-        fields = ['id', 'first_name', 'last_name', 'phone_number']
+        fields = '__all__'
+
+    def create(self, validated_data):
+        reader = super().create(validated_data)
+
+        reader.set_password(reader.password)
+        reader.save()
+        return reader
 
     # def validate_author(self, author):
     #     if author.id == 2:

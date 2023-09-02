@@ -22,4 +22,4 @@ class ReaderAdmin(admin.ModelAdmin):
     @admin.action(description='Какие книги? Не, не брал')
     def delete_all_books(self, request, reader_books: QuerySet):
         for rb in reader_books:
-            rb.books.objects.filter(reader=rb).delete()
+            rb.books.clear()
